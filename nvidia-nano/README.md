@@ -3,11 +3,11 @@
 Contains the specific instructions and `ansible` scripts for the NVidia Nano Node Platform.
 
 ## Hardware needed
- - nvidia nano
- - power supply
-   - barrel - set the jumper next to barrel connector to use barrel power (see SageEdu instructions)
- - card reader
- - sdcard
+ - [NVIDIA Jetson Nano](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/)
+ - Power Supply
+   - Barrel: Set the jumper next to barrel connector to use barrel power. Further information can be found here: [SageEdu Instructions](https://github.com/ddiLab/SageEdu)
+ - SD card
+ - Card Reader
 
 ## configure camera
 
@@ -19,7 +19,6 @@ on first login requires a password change from default (`admin` / `admin`)
 
 ## Bootstrap Steps
 1. Install [NVidia Nano OS version 4.6](https://developer.nvidia.com/embedded/jetpack-sdk-461)
-
 
 ### During the headless install to get `root` SSH access
 - user: `waggle`
@@ -191,7 +190,7 @@ install the waggle-nodeid tool to generate the nodeid file used by other service
 ```bash
 apt-get install python3-click
 wget https://github.com/waggle-sensor/waggle-nodeid/releases/download/v1.0.7/waggle-nodeid_1.0.7_all.deb
-dpkg -i waggle-nodeid_1.0.7_all.deb
+dpkg -i waggle-nodeid_1.0.7_all.deb. 
 ```
 ^ this creates a waggle-nodeid service that should run on start-up and create the /etc/waggle/node-id file
 
